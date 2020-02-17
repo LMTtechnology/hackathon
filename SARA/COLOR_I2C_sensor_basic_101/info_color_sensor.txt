@@ -1,0 +1,18 @@
+Connector - I2C Grove connector
+
+Color Sensor
+
+Pins used:
+SCL - Clock 
+SDA - Data
+
+
+Library:
+Wire.h
+Adafruit_TCS34725.h
+
+Library Manager:
+Adafruit TCS34725
+
+
+

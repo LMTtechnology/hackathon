@@ -1,0 +1,20 @@
+Connector - I2C Grove connector
+
+Time of flight Sensor
+
+Pins used:
+SCL - Clock 
+SDA - Data
+
+
+Library:
+
+#include "Adafruit_VL53L0X.h"
+
+
+Library Manager:
+Adafruit_VL53L0X download and install
+
+
+
+

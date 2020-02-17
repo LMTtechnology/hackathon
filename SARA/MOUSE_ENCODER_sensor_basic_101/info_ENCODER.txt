@@ -1,0 +1,14 @@
+Connector - J3 bottom Grove connector
+
+Digital Sensor
+
+Pins used:
+A7(D15) - Encoder input 1
+A6(D14) - Encoder input 2
+
+
+Library:
+Add EncoderStepCounter folder to Documents-Arduino-Libraries
+
+
+#include "EncoderStepCounter.h"

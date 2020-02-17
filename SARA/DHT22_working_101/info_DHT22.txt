@@ -1,0 +1,15 @@
+Connector - J3 bottom Grove connector
+
+Digital Sensor
+
+Pins used:
+A7(D15) - DHTPIN 15
+
+
+Library:
+Tools - Manage Libraries - search -
+DHT22 - 
+DHT sensor library
+Install
+
+#include "DHT.h"

@@ -1,0 +1,16 @@
+Connector -  Grove connector
+
+Digital Sensor
+
+Pins used:
+A4 - Digital One wire communication
+
+
+Library:
+Tools - Manage Libraries - search -
+Grove Ultrasonic Ranger - 
+
+Install
+
+
+#include "Ultrasonic.h"

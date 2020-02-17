@@ -1,0 +1,21 @@
+Connector - J3 bottom Grove connector
+
+Light sensor
+Pins used:
+A0 - Analog Input (ADC)
+
+Temp sensor
+Pins used:
+D2 - DHTPIN 2
+
+Digital display
+Pins used: (Grove J3)
+A7(D15) - CLK
+A6(D14) - DIO
+
+Library:
+#include "TM1637.h"
+#include "DHT.h"
+
+
+

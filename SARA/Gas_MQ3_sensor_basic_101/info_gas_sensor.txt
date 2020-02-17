@@ -1,0 +1,15 @@
+Connector - J3 bottom Grove connector
+
+Analog Sensor
+
+Pins used:
+A7 - Analog Input (ADC)
+
+
+Library:
+None
+
+
+
+Adjust the sensitivity of sensor with pottentiometer.
+

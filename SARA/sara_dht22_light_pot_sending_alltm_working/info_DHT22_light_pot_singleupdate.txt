@@ -1,0 +1,32 @@
+
+Light sensor
+Pins used:
+A0 - Analog Input (ADC)
+
+Potentiometer 
+Pins used:
+A7 - Analog Input (ADC)		(J3 Grove)
+
+Temp sensor
+Pins used:
+A4 - DHTPIN A4
+
+Library:
+#include "DHT.h"
+
+
+    ADC_light_value = analogRead(analogPin_light);   	//Read ADC value from light sensor 
+    ADC_pot_value = analogRead(analogPin_pot);   	//Read ADC value from potentiometer 
+    h = dht.readHumidity();
+    t = dht.readTemperature();
+
+    String deviceId = "5oseDujrwhnFOb030EDDoWcK";
+    String token = "maker:4KAR5LmHBiadW1VeVxRzM2co0SZWD6ufS2mwzyh1";
+    String value = "{\"Humidity\":{\"value\":" + String(h) + 
+                    "},\"Temperature\":{\"value\":" + String(t) +
+                    "},\"Pot\":{\"value\":" + String(ADC_pot_value) +
+                    "},\"Light\":{\"value\":" + String(ADC_light_value) +"}}";
+
+    String reading = deviceId + '\n' + token + '\n' + value;
+    uint8_t size = reading.length();
+    int lengthSent = n2x.socketSend(socketID, "40.68.172.187", 8891, (uint8_t*)reading.c_str(), size);

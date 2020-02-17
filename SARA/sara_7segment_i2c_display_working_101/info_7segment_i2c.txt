@@ -1,0 +1,14 @@
+Connector - J3 bottom Grove connector
+
+Digital display
+
+Pins used:
+A7(D15) - CLK
+A6(D14) - DIO
+
+Library:
+Tools - Manage Libraries - search -
+Grove 4-Digit Display (TM1637)
+Install
+
+#include "TM1637.h"

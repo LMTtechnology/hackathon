@@ -1,0 +1,13 @@
+Connector - J3 bottom Grove connector
+
+Digital control
+
+Pins used:
+D15 - Digital Output
+
+
+Library:
+None
+
+D15 - High - Enables relay to switch on(Conduct current)
+D15 - LOW - Disables relay to switch off

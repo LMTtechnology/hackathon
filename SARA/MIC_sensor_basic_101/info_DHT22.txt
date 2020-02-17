@@ -1,0 +1,10 @@
+Connector - Grove connector
+
+Analog Sensor
+
+Pins used:
+A4 - Analog In
+
+
+Library:
+None

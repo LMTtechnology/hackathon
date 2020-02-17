@@ -1,0 +1,95 @@
+read:
+https://www.kickstarter.com/projects/sodaq/cellular-iot-suite
+
+1:
+https://support.sodaq.com/getting_started/
+
+2:
+I Need Ardiuno IDE
+https://www.arduino.cc/en/Main/Software
+
+Download & Install
+
+Get libs and Links From link N1
+Additionaly Through Boards Manager find Sodaq Libs - install
+
+Get selected My Board and Port Through Ardiuno IDE
+
+Click on Sketch > Include Libraries > Manage Libraries…
+looks like here we can add liberies for different sensors!
+
+3:
+https://maker.allthingstalk.com/ground
+
+Configure Getaway and assets
+
+4:
+Find sensor we are using.
+Information needs to be added carefully!
+
+Grove - need to add Pin to code:
+Grove Pin 1 	D14 or A6 	
+Grove Pin 2 	D15 or A7
+
+Platform How to :
+https://docs.allthingstalk.com/examples/kits/okdo-air-quality-iot-starter-kit/
+https://docs.allthingstalk.com/
+
+https://docs.allthingstalk.com/developers/api/udp-messaging/
+https://support.sodaq.com/Boards/Sara_AFF/Examples/udp_att_temperature/
+https://docs.allthingstalk.com/developers/sdk/arduino-nbiot/
+
+5:
+To get the connection we need Libs:
+Sodaq_N2x
+Set parameters after downloading:
+    { "AUTOCONNECT",             false },
+    { "CR_0354_0338_SCRAMBLING", true },
+    { "CR_0859_SI_AVOID",        false },
+    { "COMBINE_ATTACH",          false },
+    { "CELL_RESELECTION",        false },
+    { "ENABLE_BIP",              false }
+Find file keys.h
+Set ID's according to your device settings in platform:
+const char* DEVICE_ID = "ID";
+const char* DEVICE_TOKEN = "maker:ID";
+const char* APN = "nb-iot.lmt.lv";
+
+5:
+In platform 
+https://allthingstalk.com/
+
+Create assets and device you need
+
+Code Example:
+
+#include <Sodaq_N2X.h>
+#include <Sodaq_wdt.h>
+#define DEBUG_STREAM SerialUSB
+#define MODEM_STREAM Serial1
+#define powerPin SARA_ENABLE
+#define enablePin SARA_TX_ENABLE
+#define MODEM_ON_OFF_PIN SARA_ENABLE
+Sodaq_N2X n2x;
+
+    String deviceId = "L33ycVs8J9qH9gCFCesTcUmu2q";
+    String token = "maker:4Tzjh6k3RxY8G0lqFxfosTbyakzFyv5pcTYZb411qw";
+    String value = "{\"t\":{\"value\":" + String(getBoardTemperature()) +"}}";
+    String reading = deviceId + '\n' + token + '\n' + value;
+	
+const char* apn = "nb-iot.lmt.lv";
+const char* forceOperator = "24701"; // optional - depends on SIM / network (network Local) Country 
+uint8_t urat = 20;
+
+    uint8_t size = reading.length();
+    int lengthSent = n2x.socketSend(socketID, "40.68.172.187", 8891, (uint8_t*)reading.c_str(), size);
+  
+n2x.connect("nb-iot.lmt.lv","0","24701", urat)) {
+       DEBUG_STREAM.println("FAILED TO CONNECT TO MODEM");
+    }
+
+
+
+Ublox Docs that can help:
+https://www.u-blox.com/sites/default/files/SARA-N2-Application-Development_AppNote_%28UBX-16017368%29.pdf
+

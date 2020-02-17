@@ -1,0 +1,10 @@
+Connector - Grove connector
+
+Digital Sensor
+
+Pins used:
+A4 - Digital In
+
+
+Library:
+None

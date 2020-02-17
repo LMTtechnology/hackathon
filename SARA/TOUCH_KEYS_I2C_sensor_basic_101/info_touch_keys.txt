@@ -1,0 +1,19 @@
+Connector - I2C Grove connector
+Touch Sensor
+
+Pins used:
+SCL - Clock 
+SDA - Data
+
+
+Library:
+
+#include "Adafruit_VL53L0X.h"
+
+
+Library Download:
+https://github.com/Seeed-Studio/Seeed_QTouch
+
+Coppy folder to Documents-Arduino-Libraries
+
+

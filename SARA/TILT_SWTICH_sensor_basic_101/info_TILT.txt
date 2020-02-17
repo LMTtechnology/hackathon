@@ -1,0 +1,10 @@
+Connector - J3 bottom Grove connector
+
+Digital Sensor
+
+Pins used:
+A7(D15) - Digital In
+
+
+Library:
+None

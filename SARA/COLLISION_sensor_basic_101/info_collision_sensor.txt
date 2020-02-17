@@ -1,0 +1,14 @@
+Connector - J3 bottom Grove connector
+
+Digital Sensor
+
+Pins used:
+A7(15) - on direction of collision
+A6(14) - other direction of collision
+
+
+Library:
+None
+
+
+
